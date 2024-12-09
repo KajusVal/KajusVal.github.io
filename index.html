@@ -3,55 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="HTML dokumento šablonas su lietuviška koduote">
-    <title>Paprastas HTML Dokumentas</title>
-    
-    <!-- Sukūrė: Kajus Valavičius -->
+    <meta name="description" content="Mano portfolio">
+    <meta name="author" content="Kajus Valavičius">
+    <meta name="keywords" content="Apie, Resume, Portfolio, Paveikslai, Asmeniniai darbai">
+    <title>My Portfolio</title>
+    <!-- Sukurta: Kajus Valavičius -->
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        section {
+            padding: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
+        footer {
+            text-align: center;
+            background: #f4f4f4;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
 
-    <link rel="stylesheet" href="style.css">
+<style>
+    #portfolio {
+        text-align: center;
+        margin: 20px;
+    }
+    #portfolio div {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .project {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .project img {
+        max-width: 200px;
+        height: auto;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+    }
+</style>
+<style>
+    ul {
+        list-style-type: disc;
+        list-style-position: inside;
+        padding-left: 40px;
+        text-align: center;
+    }
+    li {
+        margin: 10px 0;
+    }
+</style>
 </head>
 <body>
-    <h1>Sveiki atvykę!</h1>
+    <header>
+        <h1>My Portfolio</h1>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#resume">Resume</a>
+        <a href="#portfolio">Portfolio</a>
+    </nav>
+    <section id="about">
+        <h2 style="text-align: center;">About</h2>
+        <p style="text-align: center;">
+            Hello and welcome to my web! My name is John and I'm a programmer. <br> This is my portfolio 
+            website, where you can find my resume, projects I'm working
+            on or contact with me for collaboration. <br> I'm eager to start working on new projects, 
+            since I'm a very curious technician!
+        </p>
+        <div style="text-align: center; margin-top: 20px;">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Lpz98bCaE_A?si=iSFArPKF4v8Uc6hD" 
+                title="YouTube video player" style="border: none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+    <section id="resume">
+        <h2 style="text-align: center;">Resume</h2>
+        <p style="text-align: center;">This is my resume, which will
+        tell you more about me, my education and my experience at what I do: </p>
+        <ul>
+            <li>Graduated from <b>Vilnius TECH</b> university with bachelor's degree in computer engineering</li>
+            <li><b>HR coordinator</b> at <b>Vilnius TECH</b> Students' association</li>
+            <li>Working on my own projects, which leads to no previous work experience at any company</li>
+            <li>Eager to learn, invent and create. Active in the world of technologies and sports</li>
+        </ul>
+        <img src="assets/img/resume.jpg"  alt width="450" height="600">
+    </section>
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <p>Those are the projects I've worked on or still am:</p>
+        <div>
+            <div class="project">
+                <h3>Discord Bot</h3>
+                <img src="assets/img/projektas1.jpg" alt="Project 1">
+            </div>
+            <div class="project">
+                <h3>Calculator app</h3>
+                <img src="assets/img/projektas2.avif" alt="Project 2">
+            </div>
+            <div class="project">
+                <h3>Robot</h3>
+                <img src="assets/img/projektas3.jpg" alt="Project 3">
+            </div>
+        </div>
+    </section>
+    <section id="services" style="text-align: center; margin-top: 40px;">
+        <h2>Services</h2>
+        <p>Explore our services through the videos and audio below:</p>
+        <div style="margin-bottom: 20px;">
+            <h3>Robot Industry</h3>
+            <video width="560" height="315" controls>
+                <source src="assets/videos/video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div style="margin-bottom: 20px;">
+            <h3>Programming with various languages</h3>
+            <audio controls>
+                <source src="assets/audios/keyboard.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 John Johnson</p>
+    </footer>
 </body>
 </html>
-
-<!-- Code injected by live-server -->
-<script>
-	// <![CDATA[  <-- For SVG support
-	if ('WebSocket' in window) {
-		(function () {
-			function refreshCSS() {
-				var sheets = [].slice.call(document.getElementsByTagName("link"));
-				var head = document.getElementsByTagName("head")[0];
-				for (var i = 0; i < sheets.length; ++i) {
-					var elem = sheets[i];
-					var parent = elem.parentElement || head;
-					parent.removeChild(elem);
-					var rel = elem.rel;
-					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-					}
-					parent.appendChild(elem);
-				}
-			}
-			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-			var address = protocol + window.location.host + window.location.pathname + '/ws';
-			var socket = new WebSocket(address);
-			socket.onmessage = function (msg) {
-				if (msg.data == 'reload') window.location.reload();
-				else if (msg.data == 'refreshcss') refreshCSS();
-			};
-			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-				console.log('Live reload enabled.');
-				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-			}
-		})();
-	}
-	else {
-		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-	}
-	// ]]>
-</script>
-
-</body></html>
