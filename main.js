@@ -9,18 +9,3 @@ btn.onclick = () => {
     btn.textContent = isDark ? "Switch to Light Mode" : "Switch to Dark Mode";
     localStorage.setItem("theme", isDark ? "dark-mode" : "light-mode");
 };
-
-
-
-const scrollTopButton = document.getElementById("scroll-top");
-window.onscroll = function () {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        scrollTopButton.style.display = "block";
-    } else {
-        scrollTopButton.style.display = "none";
-    }
-};
-
-scrollTopButton.onclick = function () {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-};
