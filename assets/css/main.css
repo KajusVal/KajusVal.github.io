@@ -1,0 +1,91 @@
+/* Antraščių ir pastraipų šriftai */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #333;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Nuorodų ir mygtukų stiliai */
+a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Flexbox ir Grid pavyzdys */
+.container {
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* Box Model naudojimas */
+section {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+/* Dark Mode (Default) */
+body.dark-mode {
+  background-color: #121212; /* Dark gray */
+  color: white;
+}
+
+/* Light Mode */
+body.light-mode {
+  background-color: #f5f5f5; /* Light gray */
+  color: black;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  z-index: 1000;
+  padding: 10px 20px;
+  background-color: #ffffff; /* Dark mode button */
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode .theme-toggle {
+  background-color: #000000; /* Light mode button */
+  color: rgb(255, 255, 255);
+}
