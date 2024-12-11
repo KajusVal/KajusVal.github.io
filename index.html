@@ -3,166 +3,315 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mano portfolio">
-    <meta name="author" content="Kajus Valavičius">
-    <meta name="keywords" content="Apie, Resume, Portfolio, Paveikslai, Asmeniniai darbai">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <button id="theme-toggle" class="theme-toggle">Switch to Light Mode</button>
+    <button id="scroll-top" class="scroll-top">↑ Back to Top</button>
     <title>My Portfolio</title>
-    <!-- Sukurta: Kajus Valavičius -->
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-        header {
-            background: #f4f4f4;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            text-align: center;
-            background: #333;
-            color: #fff;
-            padding: 10px 0;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-        }
-        section {
-            padding: 20px;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 10px auto;
-        }
-        footer {
-            text-align: center;
-            background: #f4f4f4;
-            padding: 10px 0;
-            margin-top: 20px;
-        }
-    </style>
-<style>
-    #portfolio {
-        text-align: center;
-        margin: 20px;
-    }
-    #portfolio div {
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: center;
-        gap: 20px;
-    }
-    .project {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .project img {
-        max-width: 200px;
-        height: auto;
-        border: 2px solid #ccc;
-        border-radius: 5px;
-    }
-</style>
-<style>
-    ul {
-        list-style-type: disc;
-        list-style-position: inside;
-        padding-left: 40px;
-        text-align: center;
-    }
-    li {
-        margin: 10px 0;
-    }
-</style>
 </head>
 <body>
-    <header>
-        <h1>My Portfolio</h1>
+    <header class="bg-light py-3">
+        <h1 class="display-4" style="text-align: center;">My Portfolio</h1>
     </header>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#resume">Resume</a>
-        <a href="#portfolio">Portfolio</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#resume">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
-    <section id="about">
-        <h2 style="text-align: center;">About</h2>
-        <p style="text-align: center;">
-            Hello and welcome to my web! My name is John and I'm a programmer. <br> This is my portfolio 
-            website, where you can find my resume, projects I'm working
-            on or contact with me for collaboration. <br> I'm eager to start working on new projects, 
-            since I'm a very curious technician!
-        </p>
-        <div style="text-align: center; margin-top: 20px;">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/Lpz98bCaE_A?si=iSFArPKF4v8Uc6hD" 
-                title="YouTube video player" style="border: none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-            </iframe>
-        </div>
-    </section>
-    <section id="resume">
-        <h2 style="text-align: center;">Resume</h2>
-        <p style="text-align: center;">This is my resume, which will
-        tell you more about me, my education and my experience at what I do: </p>
-        <ul>
-            <li>Graduated from <b>Vilnius TECH</b> university with bachelor's degree in computer engineering</li>
-            <li><b>HR coordinator</b> at <b>Vilnius TECH</b> Students' association</li>
-            <li>Working on my own projects, which leads to no previous work experience at any company</li>
-            <li>Eager to learn, invent and create. Active in the world of technologies and sports</li>
-        </ul>
-        <img src="portfolio/assets/img/resume.jpg"  alt width="450" height="600">
-    </section>
-    <section id="portfolio">
-        <h2>Portfolio</h2>
-        <p>Those are the projects I've worked on or still am:</p>
-        <div>
-            <div class="project">
-                <h3>Discord Bot</h3>
-                <img src="portfolio/assets/img/projektas1.jpg" alt="Project 1">
+    <section id="profile" class="container my-5">
+        <div class="row">
+          <div class="col-md-4 text-center">
+            <img src="assets/img/profile1.avif" alt="Profile Picture" class="rounded-circle img-fluid mb-3" style="width: 150px; height: 150px;">
+            <h4 class="mb-1">John Johnson</h4>
+            <p class="text-muted">Developer</p>
+            <ul class="list-unstyled">
+              <li><strong>Email:</strong> xlapfpa@example.com</li>
+              <li><strong>Phone:</strong> (111) 111-1111</li>
+            </ul>
+          </div>
+          <div class="col-md-8">
+            <h3 class="text-primary mb-4">About Me</h3>
+            <p>
+                I am passionate about technology and thrive on building innovative solutions that make a difference. Over the years, I have honed my skills in software development, problem-solving, and creating efficient systems that meet real-world needs. From designing user-friendly applications to collaborating on complex technical projects, I enjoy every step of the process. My experience spans multiple programming languages and platforms, allowing me to adapt quickly and take on diverse challenges. I am constantly learning and staying updated on industry trends to ensure my work remains cutting-edge.
+            </p>
+            <p>
+                Whether it’s coding, troubleshooting, or brainstorming new ideas, I am driven by curiosity and a love for creating impactful technologies. Outside of work, I enjoy exploring emerging technologies and engaging with the tech community to share knowledge and inspire others.
+            </p>
+      
+            <h4 class="mt-4 mb-3">Skills</h4>
+            <div>
+              <p>HTML</p>
+              <div class="progress">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 100%">100%</div>
+              </div>
+              <p>CSS</p>
+              <div class="progress">
+                <div class="progress-bar bg-info" role="progressbar" style="width: 80%">80%</div>
+              </div>
+              <p>JavaScript</p>
+              <div class="progress">
+                <div class="progress-bar bg-warning" role="progressbar" style="width: 75%">75%</div>
+              </div>
+              <p>Photoshop</p>
+              <div class="progress">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 90%">90%</div>
+              </div>
             </div>
-            <div class="project">
-                <h3>Calculator app</h3>
-                <img src="portfolio/assets/img/projektas2.avif" alt="Project 2">
-            </div>
-            <div class="project">
-                <h3>Robot</h3>
-                <img src="portfolio/assets/img/projektas3.jpg" alt="Project 3">
+          </div>
+        </div>
+      </section>
+      <section id="resume" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center">Resume</h2>
+            <p class="text-center">This is my resume, which will tell you more about me, my education, and my experience at what I do:</p>
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="list-unstyled text-center">
+                        <li>Graduated from <b>Vilnius TECH</b> university with bachelor's degree in computer engineering</li>
+                        <li><b>HR coordinator</b> at <b>Vilnius TECH</b> Students' association</li>
+                        <li>Working on my own projects, which leads to no previous work experience at any company</li>
+                        <li>Eager to learn, invent and create. Active in the world of technologies and sports</li>
+                    </ul>
+                </div>
+                <div class="col-md-12 text-center">
+                    <img src="assets/img/resume.jpg" alt="Resume Image" class="img-fluid rounded" style="max-width: 650px;">
+                </div>
             </div>
         </div>
     </section>
-    <section id="services" style="text-align: center; margin-top: 40px;">
-        <h2>Services</h2>
-        <p>Explore our services through the videos and audio below:</p>
-        <div style="margin-bottom: 20px;">
-            <h3>Robot Industry</h3>
-            <video width="560" height="315" controls>
-                <source src="portfolio/assets/videos/video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-        <div style="margin-bottom: 20px;">
-            <h3>Programming with various languages</h3>
-            <audio controls>
-                <source src="portfolio/assets/audios/keyboard.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
+    <section id="portfolio" class="container py-5">
+        <h2 class="text-center">Portfolio</h2>
+        <p class="text-center">Those are the projects I've worked on or still am:</p>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="portfolio-item text-center">
+                    <h3>Discord Bot</h3>
+                    <img src="assets/img/projektas1.jpg" alt="Project 1" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="portfolio-item text-center">
+                    <h3>Calculator App</h3>
+                    <img src="assets/img/projektas2.avif" alt="Project 2" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="portfolio-item text-center">
+                    <h3>Robot</h3>
+                    <img src="assets/img/projektas3.jpg" alt="Project 3" class="img-fluid">
+                </div>
+            </div>
         </div>
     </section>
-    <footer>
-        <p>&copy; 2024 John Johnson</p>
+    <section id="services" class="bg-light py-5">
+        <div class="container text-center">
+            <h2>Services</h2>
+            <p>Explore our services through the videos and audio below:</p>
+            <div class="mb-4">
+                <h3>Robot Industry</h3>
+                <div class="ratio ratio-16x9">
+                    <video controls>
+                        <source src="assets/videos/video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <div>
+                <h3>Programming with Various Languages</h3>
+                <audio controls>
+                    <source src="assets/audios/keyboard.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+    </section>
+    <section id="faq" class="container py-5">
+        <h2 class="mb-4" style="text-align: center">Frequently Asked Questions</h2>
+        <p class="text-muted" style="text-align: center">These are the answers to most frequently asked questions</p>
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        1. Non consectetur a erat nam at lectus urna duis?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        2. Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        3. Dolor sit amet consectetur adipiscing elit pellentesque?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Dolor sit amet consectetur adipiscing elit pellentesque habitant.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        4. Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla posuere sollicitudin.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        5. Tempus quam pellentesque nec nam aliquam sem et tortor consequat?
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Tempus quam pellentesque nec nam aliquam sem et tortor consequat.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>  
+    <section id="testimonials" class="text-center text-white position-relative py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <!-- Testimonial Content -->
+                    <div class="testimonial-item active">
+                        <img src="https://via.placeholder.com/100" alt="Person" class="rounded-circle mb-3">
+                        <h4 class="fw-bold">Saul Goodman</h4>
+                        <p class="mb-2">CEO & Founder</p>
+                        <div class="text-warning mb-3">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="px-3">
+                            <i class="fas fa-quote-left"></i>
+                            Proin iaculis purus consequat sem cure digni ssim donec porttitor entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecenas aliquam, risus at semper.
+                            <i class="fas fa-quote-right"></i>
+                        </p>
+                    </div>
+                    <div class="testimonial-item">
+                        <img src="https://via.placeholder.com/100" alt="Person" class="rounded-circle mb-3">
+                        <h4 class="fw-bold">Walter White</h4>
+                        <p class="mb-2">Chemist</p>
+                        <div class="text-warning mb-3">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="px-3">
+                            <i class="fas fa-quote-left"></i>
+                            Nulla vitae elit libero, a pharetra augue mollis interdum. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                            <i class="fas fa-quote-right"></i>
+                        </p>
+                    </div>
+                    <div class="testimonial-item">
+                        <img src="https://via.placeholder.com/100" alt="Person" class="rounded-circle mb-3">
+                        <h4 class="fw-bold">Jesse Pinkman</h4>
+                        <p class="mb-2">Entrepreneur</p>
+                        <div class="text-warning mb-3">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                        </div>
+                        <p class="px-3">
+                            <i class="fas fa-quote-left"></i>
+                            Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+                            <i class="fas fa-quote-right"></i>
+                        </p>
+                    </div>
+    
+                    <!-- Dots -->
+                    <div class="mt-4">
+                        <span class="dot active" data-index="0"></span>
+                        <span class="dot" data-index="1"></span>
+                        <span class="dot" data-index="2"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>         
+    <section id="contact" class="container py-5">
+        <h2 class="text-center">Contact</h2>
+        <p class="text-center">If you have further questions, please contact me</p>
+        <div class="contact-info row bg-light p-4 rounded shadow-sm mb-4">
+            <div class="col-md-4 text-center">
+                <i class="bi bi-geo-alt-fill text-primary" style="font-size: 2rem;"></i>
+                <h4 class="mt-2">Address</h4>
+                <p>All Saints street 18, Frankfurt, Germany</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <i class="bi bi-telephone-fill text-success" style="font-size: 2rem;"></i>
+                <h4 class="mt-2">Call Me</h4>
+                <p>111 111 1111</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <i class="bi bi-envelope-fill text-danger" style="font-size: 2rem;"></i>
+                <h4 class="mt-2">Email Me</h4>
+                <p>xfapfha@example.com</p>
+            </div>
+        </div>
+        <div class="form-container bg-light p-4 rounded shadow-sm">
+            <form>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="email" class="form-control" placeholder="Your Email" required>
+                    </div>
+                    <div class="col-12">
+                        <input type="text" class="form-control" placeholder="Subject" required>
+                    </div>
+                    <div class="col-12">
+                        <textarea class="form-control" rows="5" placeholder="Message" required></textarea>
+                    </div>
+                    <div class="col-12 text-center">
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer class="bg-dark text-light py-3">
+        <p class="text-center mb-0">&copy; 2024 John Johnson</p>
     </footer>
+    <script src="main.js"></script>
 </body>
 </html>
