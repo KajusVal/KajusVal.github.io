@@ -28,3 +28,21 @@ scrollToTopButton.addEventListener('click', () => {
         behavior: 'smooth' // Sklandus grįžimas
     });
 });
+
+// Funkcija, kuri gauna dabartinį laiką ir jį paverčia į formatą
+function showTime() {
+    const now = new Date(); // Dabartinis laikas
+    const hours = String(now.getHours()).padStart(2, '0'); // Valandos
+    const minutes = String(now.getMinutes()).padStart(2, '0'); // Minutės
+    const seconds = String(now.getSeconds()).padStart(2, '0'); // Sekundės
+
+    // Laiko formatas (HH:MM:SS)
+    const time = `${hours}:${minutes}:${seconds}`;
+
+    // Laikrodžio elemento atnaujinimas
+    document.getElementById('clock').textContent = time;
+}
+
+// Paleisti laiką iš karto ir atnaujinti kas sekundę
+setInterval(showTime, 1000);
+showTime(); // Parodo laiką iš karto nebelaukiant pirmos sekundės
