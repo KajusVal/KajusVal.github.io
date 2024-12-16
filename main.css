@@ -1,6 +1,6 @@
 /* Bendri nustatymai */
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 0;
@@ -314,4 +314,51 @@ color: #e0e0e0; /* Light text color for contact info in dark mode */
 
 .social-icons span:hover {
   color: #3498db; /* Change color on hover */
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  text-align: center; /* Center all text and inline elements */
+}
+
+/* Section styling */
+section {
+  margin: 20px;
+}
+
+h1, p {
+  margin: 10px auto; /* Add spacing and center */
+}
+/* MathJax container styling */
+.math-container {
+  margin: 20px auto; /* Center the container */
+  display: inline-block; /* Inline-block ensures respect for text-align: center */
+}
+
+/* SVG container styling */
+.svg-container {
+  display: inline-block; /* Allows SVG to align centrally */
+  margin: 20px auto; /* Add spacing around the SVG */
+}
+
+svg {
+  display: block;
+  margin: 0 auto; /* Center the SVG element */
+}
+
+/* Optional: Styling for the SVG text */
+svg text {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  fill: black; /* Ensures text is visible inside the SVG */
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #111; /* Match your dark theme */
+  color: #fff; /* Ensure text is visible */
 }
