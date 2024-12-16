@@ -362,3 +362,11 @@ body {
   background-color: #111; /* Match your dark theme */
   color: #fff; /* Ensure text is visible */
 }
+
+/* Laikrodžio stilius */
+.clock {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-top: 10px;
+}
