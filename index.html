@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="lt">
 <head>
     <meta charset="UTF-8">
@@ -147,7 +147,28 @@
                 </audio>
             </div>
         </div>
-    </section>        
+    </section>  
+    <section>
+        <!-- Heading -->
+        <h1>My favorite math objects</h1>
+        <p>Below are mathematical objects, which were created using MathML and MathJax library.</p>
+        
+        <!-- MathJax Formula -->
+        <div class="math-container">
+            <p>
+                $$\int_D (\nabla \cdot \mathbf{F}) dV = \int_{\partial D} \mathbf{F} \cdot \mathbf{n} dS$$
+            </p>
+        </div>
+        <br>
+        <div class="svg-container">
+            <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="80" stroke="blue" stroke-width="3" fill="lightblue" />
+                <text x="50%" y="50%" text-anchor="middle" stroke="black" stroke-width="1px" dy=".3em">
+                    SVG Example
+                </text>
+            </svg>
+        </div>
+    </section>     
     <section id="contact" class="container py-5">
         <h2 class="text-center">Contact</h2>
         <p class="text-center">If you have further questions, please contact me</p>
@@ -155,7 +176,7 @@
             <div class="col-md-4 text-center">
                 <i class="bi bi-geo-alt-fill text-primary" style="font-size: 2rem;"></i>
                 <h4 class="mt-2">Address</h4>
-                <p>All Saints street 18, Frankfurt, Germany</p>
+                <p>All Saints Street 18, Frankfurt, Germany</p>
             </div>
             <div class="col-md-4 text-center">
                 <i class="bi bi-telephone-fill text-success" style="font-size: 2rem;"></i>
@@ -190,7 +211,7 @@
             </form>
         </div>
     </section>
-    <footer class="bg-dark text-light py-3">
+    <footer class="text-light py-3">
         <p class="text-center mb-0">&copy; 2024 John Johnson</p>
         <div class="social-icons">
             <span>📩</span>
@@ -200,5 +221,8 @@
         </div>
     </footer>
     <script src="main.js"></script>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js">
+    </script>
 </body>
 </html>
