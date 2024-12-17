@@ -351,12 +351,12 @@ svg {
 
 /* Optional: Styling for the SVG text */
 svg text {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   fill: black; /* Ensures text is visible inside the SVG */
 }
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #111; /* Match your dark theme */
@@ -369,4 +369,71 @@ body {
   font-weight: bold;
   letter-spacing: 2px;
   margin-top: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  font-size: 18px;
+  color: white;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  transition: border-color 0.3s ease;
+}
+/* Mygtuko stilius */
+form button {
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #fff;
+  background-color: grey;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: lightgray;
+}
+
+/* Rezultatų skyriaus stilius */
+.result {
+  grid-column: 6;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Spalvotos vidurkio reikšmės stilius */
+.result .rating {
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+  display: inline-block;
+}
+
+.result .rating.red {
+  background-color: #ff4d4d;
+}
+
+.result .rating.orange {
+  background-color: #ffa500;
+}
+
+.result .rating.green {
+  background-color: #4caf50;
 }
