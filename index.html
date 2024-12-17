@@ -152,7 +152,6 @@
         <h2>My favorite math objects</h2>
         <p>Below are mathematical objects, which were created using MathML and MathJax library.</p>
         
-        <!-- MathJax Formula -->
         <div class="math-container">
             <p>
                 $$\int_D (\nabla \cdot \mathbf{F}) dV = \int_{\partial D} \mathbf{F} \cdot \mathbf{n} dS$$
@@ -174,47 +173,46 @@
             <div id="clock" class="clock"></div>
         </div>
     </section>
-    <section id="contact" class="container py-5">
-        <h2 class="text-center">Contact</h2>
-        <p class="text-center">If you have further questions, please contact me</p>
-        <div class="contact-info row p-4 rounded shadow-sm mb-4">
-            <div class="col-md-4 text-center">
-                <i class="bi bi-geo-alt-fill text-primary" style="font-size: 2rem;"></i>
-                <h4 class="mt-2">Address</h4>
-                <p>All Saints Street 18, Frankfurt, Germany</p>
-            </div>
-            <div class="col-md-4 text-center">
-                <i class="bi bi-telephone-fill text-success" style="font-size: 2rem;"></i>
-                <h4 class="mt-2">Call Me</h4>
-                <p>111 111 1111</p>
-            </div>
-            <div class="col-md-4 text-center">
-                <i class="bi bi-envelope-fill text-danger" style="font-size: 2rem;"></i>
-                <h4 class="mt-2">Email Me</h4>
-                <p>xfapfha@example.com</p>
-            </div>
-        </div>
-        <div class="form-container p-4 rounded shadow-sm">
-            <form>
-                <div class="row g-3">
-                    <div class="col-md-6">
-                        <input type="text" class="form-control" placeholder="Your Name" required>
-                    </div>
-                    <div class="col-md-6">
-                        <input type="email" class="form-control" placeholder="Your Email" required>
-                    </div>
-                    <div class="col-12">
-                        <input type="text" class="form-control" placeholder="Subject" required>
-                    </div>
-                    <div class="col-12">
-                        <textarea class="form-control" rows="5" placeholder="Message" required></textarea>
-                    </div>
-                    <div class="col-12 text-center">
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </div>
-                </div>
-            </form>
-        </div>
+    <section>
+        <section>
+            <h2>Contact Form</h2>
+                <form id="contactForm">
+                    <label for="name">First Name:</label><br>
+                    <input type="text" id="name" name="name" placeholder="Your name.." required><br><br>
+    
+                    <label for="surname">Last Name:</label><br>
+                    <input type="text" id="surname" name="surname" placeholder="Your last name.." required><br><br>
+            
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" placeholder="Your email address.." required><br><br>
+            
+                    <label for="phone">Phone Number:</label><br>
+                    <input type="tel" id="phone" name="phone" placeholder="Your phone number.." required><br><br>
+            
+                    <label for="address">Address:</label><br>
+                    <input type="text" id="address" name="address" placeholder="Your Address" required><br><br>
+    
+                <h3>Rate Us:</h3>
+                    <label>How do you rate our website's design?</label><br>
+                    <input type="number" id="q1" name="q1" min="1" max="10" required><br><br>
+                
+                    <label>How do you rate our website's difficulty to use?</label><br>
+                    <input type="number" id="q2" name="q2" min="1" max="10" required><br><br>
+                
+                    <label>How do you rate quality of our services?</label><br>
+                    <input type="number" id="q3" name="q3" min="1" max="10" required><br><br>
+                
+                    <label>How do you rate our communication?</label><br>
+                    <input type="number" id="q4" name="q4" min="1" max="10" required><br><br>
+                
+                    <label>How possible it is that you will recommend us to our friends?</label><br>
+                    <input type="number" id="q5" name="q5" min="1" max="10" required><br><br>
+     
+                    <button type="button" onclick="saveData()">Save</button>
+                </form>
+    
+                <div class="result" id="result"></div>
+    </section>
     </section>
     <footer class="text-light py-3">
         <p class="text-center mb-0">&copy; 2024 John Johnson</p>
