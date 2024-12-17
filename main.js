@@ -46,3 +46,47 @@ function showTime() {
 // Paleisti laiką iš karto ir atnaujinti kas sekundę
 setInterval(showTime, 1000);
 showTime(); // Parodo laiką iš karto nebelaukiant pirmos sekundės
+
+function saveData() {
+    const formData = {
+        name: document.getElementById('name').value,
+        surname: document.getElementById('surname').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        address: document.getElementById('address').value,
+        ratings: [
+            parseInt(document.getElementById('q1').value),
+            parseInt(document.getElementById('q2').value),
+            parseInt(document.getElementById('q3').value),
+            parseInt(document.getElementById('q4').value),
+            parseInt(document.getElementById('q5').value),
+        ],
+    };
+
+    console.log(formData); // Rezultatas konsolėje
+
+    displayData(formData);
+}
+function displayData(data) {
+    const resultDiv = document.getElementById('result');
+    resultDiv.innerHTML = `
+        <p>Name (email): ${data.name} ${data.surname} (${data.email})</p>
+        <p>Phone Number: ${data.phone}</p>
+        <p>Address: ${data.address}</p>
+    `;
+
+    const average = data.ratings.reduce((sum, r) => sum + r, 0) / data.ratings.length;
+
+    let avgClass = '';
+    if (average <= 4) {
+        avgClass = 'red';
+    } else if (average <= 7) {
+        avgClass = 'orange';
+    } else {
+        avgClass = 'green';
+    }
+
+    resultDiv.innerHTML += `
+        <p>Vidurkis: <span class="rating ${avgClass}">${average.toFixed(2)}</span></p>
+    `;
+}
