@@ -87,6 +87,5 @@ function displayData(data) {
     }
 
     resultDiv.innerHTML += `
-        <p>Vidurkis: <span class="rating ${avgClass}">${average.toFixed(2)}</span></p>
-    `;
+        <p>Average: <span class="rating ${avgClass}">${average.toFixed(2)}</span></p>`;
 }
